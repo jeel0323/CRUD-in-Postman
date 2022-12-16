@@ -6,23 +6,6 @@ const Student = require("./models/student.js")
 const port = process.env.PORT || 3000 ; 
 app.use(express.json());
 
-// // DB connection
-// mongoose.set('strictQuery', false);
-
-// const mongoDB = "mongodb://0.0.0.0:27017/StudentsData";
-// mongoose.connect(mongoDB, { 
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true },
-//     (err)=>{
-//         if(err){
-//             console.log(err)
-//         }
-//         else{
-//             console.log("connection succcessfull")
-//         }
-// })
-// //Db connection code ends
-
 // Create new Student (C)
 app.post("/", (req,res) =>{
     // console.log(req.body);
