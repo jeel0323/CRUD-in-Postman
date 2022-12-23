@@ -25,6 +25,11 @@ const Schema = new mongoose.Schema({
             if(!validator.isEmail(value))
             throw new Error("invalid email!!")
         }
+    },
+
+    password:{
+        type:String,
+        required:true
     }
 })
 
