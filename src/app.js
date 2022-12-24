@@ -30,12 +30,12 @@ app.post("/register", (req,res) =>{
 });
 
 //Get Students (R) in sorted order of names
-app.get("/allStudents/:page", async (req,res) => {
+app.get("/allStudents", async (req,res) => {
     try{
       let page;
 
-      if(req.params.page){
-          page = parseInt(req.params.page);
+      if(req.query.page){
+          page = parseInt(req.query.page);
       }
       else{
           page = 1;
